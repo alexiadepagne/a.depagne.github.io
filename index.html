@@ -3,60 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book with Alexia - Babyfoot Pro</title>
+  <title>Alexia Foosball</title>
   <style>
+    :root {
+      --main-color: #ffcc00;
+      --accent-color: #222;
+      --dark-bg: #111;
+      --text-color: #fff;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #0e0e0e;
-      color: #fff;
+      background: var(--dark-bg);
+      color: var(--text-color);
     }
     header {
-      background: #a00;
+      background: var(--accent-color);
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     }
     header img.logo {
-      height: 70px;
+      height: 60px;
+      border-radius: 10px;
     }
     nav a {
       margin-left: 20px;
-      color: #fff;
+      color: var(--main-color);
       text-decoration: none;
-      font-weight: 600;
+      font-weight: bold;
       transition: color 0.3s;
     }
     nav a:hover {
-      color: #ffcccc;
+      color: #fff;
     }
     #hero {
-      background: linear-gradient(to right, #a00, #600);
-      padding: 4rem 2rem;
+      background: url('Gorillas.jpg') center/cover no-repeat;
+      padding: 5rem 2rem;
       text-align: center;
+      color: var(--accent-color);
+      background-blend-mode: overlay;
+      background-color: rgba(0, 0, 0, 0.5);
     }
     #hero h1 {
-      font-size: 3rem;
+      font-size: 3.2rem;
       margin-bottom: 1rem;
+      color: var(--main-color);
     }
     #hero p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
     }
     .cta-button {
-      background: #fff;
-      color: #a00;
+      background: var(--main-color);
+      color: #000;
       font-weight: bold;
       padding: 1rem 2rem;
       border: none;
-      border-radius: 8px;
+      border-radius: 50px;
       cursor: pointer;
       font-size: 1.1rem;
       margin-top: 2rem;
       transition: background 0.3s;
     }
     .cta-button:hover {
-      background: #ffeaea;
+      background: #ffe45e;
     }
     section {
       padding: 3rem 2rem;
@@ -64,54 +77,61 @@
       margin: 0 auto;
     }
     h2 {
-      color: #ff4a4a;
+      color: var(--main-color);
       font-size: 2rem;
       margin-bottom: 1rem;
+      text-align: center;
     }
     ul {
       list-style: none;
       padding: 0;
     }
     ul li {
-      background: #1a1a1a;
-      padding: 1rem;
+      background: #1d1d1d;
+      padding: 1.2rem;
       margin-bottom: 1rem;
-      border-left: 4px solid #a00;
+      border-left: 6px solid var(--main-color);
+      border-radius: 6px;
     }
     form {
       display: flex;
       flex-direction: column;
       gap: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
     }
     input, textarea {
       padding: 0.8rem;
       border-radius: 5px;
       border: none;
+      font-size: 1rem;
     }
     button {
-      background: #a00;
-      color: white;
+      background: var(--main-color);
+      color: #000;
       padding: 0.8rem;
       border: none;
-      border-radius: 5px;
+      border-radius: 30px;
       font-weight: bold;
       cursor: pointer;
       font-size: 1rem;
     }
     footer {
-      background: #1c1c1c;
+      background: var(--accent-color);
       text-align: center;
       padding: 2rem;
+      margin-top: 4rem;
     }
     .socials img {
       width: 30px;
       margin: 0 10px;
+      filter: brightness(0) invert(1);
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="Gorillas.jpg" alt="Alexia Logo" class="logo">
+    <img src="Gorillas.jpg" alt="Club Logo" class="logo">
     <nav>
       <a href="#services">Services</a>
       <a href="#contact">Book Me</a>
@@ -119,22 +139,22 @@
   </header>
 
   <section id="hero">
-    <h1>Boost Your Event with Alexia</h1>
-    <p>Professional babyfoot player & passionate competitor. Bring energy, skill and class to your next event.</p>
-    <a href="#contact"><button class="cta-button">Book a Session</button></a>
+    <h1>Alexia Foosball</h1>
+    <p>Bring elite-level energy and passion to your next event — with style, skill, and serious babyfoot impact.</p>
+    <a href="#contact"><button class="cta-button">Book Now</button></a>
   </section>
 
   <section id="services">
     <h2>What I Offer</h2>
     <ul>
-      <li><strong>🎯 Personal Babyfoot Coaching</strong><br>One-on-one sessions to improve your game or start from scratch.</li>
-      <li><strong>🏆 Tournament Hosting</strong><br>Dynamic, structured events for companies, schools, or private groups.</li>
-      <li><strong>🕹️ Table Rental</strong><br>High-quality babyfoot tables delivered for your occasion.</li>
+      <li><strong>🎯 Personal Babyfoot Coaching</strong><br>One-on-one or group sessions — tailored to all levels.</li>
+      <li><strong>🏆 Event & Tournament Organization</strong><br>Corporate, school or private — dynamic, fun and competitive formats.</li>
+      <li><strong>🕹️ Foosball Table Rentals</strong><br>High-end tables delivered and set up at your venue.</li>
     </ul>
   </section>
 
   <section id="contact">
-    <h2>Book Me Today</h2>
+    <h2>Let’s Work Together</h2>
     <form action="https://formsubmit.co/alexia.depagne@gmail.com" method="POST">
       <input type="hidden" name="_redirect" value="thankyou.html">
       <input type="text" name="name" placeholder="Your name" required>
@@ -153,7 +173,7 @@
         <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
       </a>
     </div>
-    <p>&copy; 2025 Alexia Depagne — Tu es ta seule limite.</p>
+    <p>&copy; 2025 Alexia Foosball — Tu es ta seule limite.</p>
   </footer>
 </body>
 </html>
