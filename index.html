@@ -17,6 +17,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
       padding: 1.2em 1.5em;
       box-shadow: 0 2px 10px rgba(0,0,0,0.6);
       position: fixed;
@@ -40,13 +41,16 @@
     }
     nav {
       display: flex;
-      gap: 1.2em;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 1em;
+      margin-top: 0.5em;
     }
     nav a {
       color: #ccc;
       text-decoration: none;
       font-weight: 500;
-      white-space: nowrap;
+      font-size: 0.95em;
     }
     nav a:hover {
       color: #ff4747;
@@ -101,106 +105,3 @@
     .service-box:hover {
       transform: translateY(-5px);
     }
-    .service-box h3 {
-      color: #ff4747;
-      margin-bottom: 0.5em;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-    input, textarea {
-      padding: 1em;
-      border: none;
-      border-radius: 8px;
-      background: #333;
-      color: white;
-    }
-    button[type="submit"] {
-      background: #ff4747;
-      color: white;
-      border: none;
-      padding: 1em;
-      border-radius: 30px;
-      cursor: pointer;
-    }
-    button[type="submit"]:hover {
-      background: #cc3939;
-    }
-    footer {
-      background: #111;
-      text-align: center;
-      padding: 2em;
-      color: #888;
-    }
-    .socials img {
-      width: 28px;
-      margin: 0 10px;
-      vertical-align: middle;
-      filter: brightness(0) invert(1);
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="logo">
-      <img src="Gorillas.jpg" alt="logo">
-      <span>Alexia Depagne</span>
-    </div>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <h1>Elevate Your Game</h1>
-    <p>Book coaching sessions, tournaments, or foosball table rentals with a champion player. Professional, personal, powerful.</p>
-    <a href="#contact"><button class="cta-button">Book Now</button></a>
-  </section>
-
-  <section id="services" class="section">
-    <h2 style="text-align:center; color: #ff4747; font-size: 2em;">What I Offer</h2>
-    <div class="services">
-      <div class="service-box">
-        <h3>Foosball Coaching</h3>
-        <p>Private and group coaching tailored to your level. Learn from an experienced player with international success.</p>
-      </div>
-      <div class="service-box">
-        <h3>Event Organization</h3>
-        <p>Complete tournament planning for schools, companies, and private events. Competitive, inclusive, unforgettable.</p>
-      </div>
-      <div class="service-box">
-        <h3>Table Rental</h3>
-        <p>Rent professional tables for any event, with delivery and setup. Perfect for parties, tournaments, and exhibitions.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section">
-    <h2 style="text-align:center; color: #ff4747; font-size: 2em;">Contact Me</h2>
-    <form action="https://formsubmit.co/alexia.depagne@gmail.com" method="POST">
-      <input type="hidden" name="_redirect" value="thankyou.html">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your message or booking request" rows="5" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <footer>
-    <div class="socials">
-      <a href="https://www.instagram.com/a.depagne/" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-      </a>
-      <a href="https://www.tiktok.com/@a.depagne" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
-      </a>
-    </div>
-    <p style="margin-top: 1em; font-style: italic;">You are your only limit.</p>
-  </footer>
-</body>
-</html>
