@@ -1,178 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alexia Babyfoot</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book with Alexia - Babyfoot Pro</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #0e0e0e;
-      color: white;
+      background: #0e0e0e;
+      color: #fff;
     }
-
     header {
+      background: #a00;
+      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1em 2em;
-      background: #1c1c1c;
-      border-bottom: 2px solid #a00;
     }
-
-    .logo {
-      height: 80px;
+    header img.logo {
+      height: 70px;
     }
-
     nav a {
       margin-left: 20px;
       color: #fff;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      transition: color 0.3s;
     }
-
+    nav a:hover {
+      color: #ffcccc;
+    }
     #hero {
+      background: linear-gradient(to right, #a00, #600);
+      padding: 4rem 2rem;
       text-align: center;
-      padding: 3em 1em;
-      background: #a00;
-      color: white;
     }
-
-    #services, #contact {
-      padding: 2em;
-      background: #121212;
+    #hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
     }
-
-    #services ul {
-      list-style-type: square;
-      padding-left: 1.5em;
+    #hero p {
+      font-size: 1.2rem;
     }
-
-    form {
-      max-width: 500px;
+    .cta-button {
+      background: #fff;
+      color: #a00;
+      font-weight: bold;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      margin-top: 2rem;
+      transition: background 0.3s;
+    }
+    .cta-button:hover {
+      background: #ffeaea;
+    }
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
       margin: 0 auto;
+    }
+    h2 {
+      color: #ff4a4a;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      background: #1a1a1a;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid #a00;
+    }
+    form {
       display: flex;
       flex-direction: column;
+      gap: 1rem;
     }
-
     input, textarea {
-      margin-bottom: 1em;
-      padding: 10px;
+      padding: 0.8rem;
       border-radius: 5px;
       border: none;
     }
-
     button {
       background: #a00;
       color: white;
+      padding: 0.8rem;
       border: none;
-      padding: 10px;
       border-radius: 5px;
-      cursor: pointer;
       font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
     }
-
     footer {
-      text-align: center;
-      padding: 2em;
       background: #1c1c1c;
-      border-top: 2px solid #a00;
+      text-align: center;
+      padding: 2rem;
     }
-
-    .socials {
-      margin-bottom: 1em;
-    }
-
-    .social-icon {
+    .socials img {
       width: 30px;
       margin: 0 10px;
-    }
-
-    .thankyou {
-      display: none;
-      text-align: center;
-      padding: 4em 2em;
-    }
-
-    .thankyou.visible {
-      display: block;
-    }
-
-    .main-content {
-      display: block;
-    }
-
-    .main-content.hidden {
-      display: none;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="Gorillas.jpg" alt="TFC Hülzweiler-Saarwellingen Logo" class="logo">
+    <img src="Gorillas.jpg" alt="Alexia Logo" class="logo">
     <nav>
       <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact">Book Me</a>
     </nav>
   </header>
 
-  <div class="main-content">
-    <section id="hero">
-      <h1>Alexia Depagne</h1>
-      <p>Professional foosball player - Elevate your events with class and competition</p>
-    </section>
+  <section id="hero">
+    <h1>Boost Your Event with Alexia</h1>
+    <p>Professional babyfoot player & passionate competitor. Bring energy, skill and class to your next event.</p>
+    <a href="#contact"><button class="cta-button">Book a Session</button></a>
+  </section>
 
-    <section id="services">
-      <h2>What I Offer</h2>
-      <ul>
-        <li><strong>Foosball Lessons</strong> – Individual or group coaching</li>
-        <li><strong>Tournament Organization</strong> – For companies, schools, or private events</li>
-        <li><strong>Foosball Table Rental</strong> – Premium tables for all occasions</li>
-      </ul>
-    </section>
+  <section id="services">
+    <h2>What I Offer</h2>
+    <ul>
+      <li><strong>🎯 Personal Babyfoot Coaching</strong><br>One-on-one sessions to improve your game or start from scratch.</li>
+      <li><strong>🏆 Tournament Hosting</strong><br>Dynamic, structured events for companies, schools, or private groups.</li>
+      <li><strong>🕹️ Table Rental</strong><br>High-quality babyfoot tables delivered for your occasion.</li>
+    </ul>
+  </section>
 
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form id="contact-form">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </div>
-
-  <div class="thankyou" id="thankyou">
-    <h1>Thank you!</h1>
-    <p>Your message has been sent successfully. I’ll get back to you shortly.</p>
-    <a href="#" onclick="window.location.reload()">← Back to homepage</a>
-  </div>
-
-  <footer>
-    <div class="socials">
-      <a href="https://www.instagram.com/a.depagne/" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="social-icon">
-      </a>
-      <a href="https://www.tiktok.com/@a.depagne" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" class="social-icon">
-      </a>
-    </div>
-    <p>&copy; 2025 Alexia Depagne. All rights reserved.</p>
-  </footer>
-
-  <script>
-    document.getElementById(\"contact-form\").addEventListener(\"submit\", function (e) {
-      e.preventDefault();
-      document.querySelector(\".main-content\").classList.add(\"hidden\");
-      document.getElementById(\"thankyou\").classList.add(\"visible\");
-    });
-  </script>
-</body>
-</html>
+  <section id="contact">
+    <h2>Book Me Today</h2>
+    <form action="https://formsubmit.co/alexia.depagne@gmail.com" method="POST">
+      <input type="hidden" name="_redirect" value="thankyou.html">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" placeholder="Tell me more about your event or request..." rows="5" required></textarea>
+      <button type="submi
