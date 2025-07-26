@@ -42,9 +42,11 @@
     nav {
       display: flex;
       flex-wrap: wrap;
-      justify-content: flex-start;
+      justify-content: center;
+      align-items: center;
       gap: 1.2em;
-      padding-left: 2em;
+      padding-left: 1em;
+      flex-grow: 1;
     }
     nav a {
       color: #ccc;
@@ -146,6 +148,28 @@
       vertical-align: middle;
       filter: brightness(0) invert(1);
     }
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 1em;
+      scroll-snap-type: x mandatory;
+      padding: 2em 0;
+    }
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+    .carousel-item {
+      background: #1a1a1a;
+      border-radius: 10px;
+      padding: 1.5em;
+      min-width: 250px;
+      scroll-snap-align: start;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .carousel-item p {
+      font-style: italic;
+      margin-bottom: 0.5em;
+    }
     @media (max-width: 600px) {
       nav {
         justify-content: center;
@@ -204,13 +228,21 @@
   </section>
 
   <section id="reviews" class="section">
-    <h2 style="text-align:center; color: #ff4747; font-size: 2em;">Leave a Review</h2>
-    <form action="https://formsubmit.co/alexia.depagne@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="New Review">
-      <textarea name="review" placeholder="How was your experience?" rows="4" required></textarea>
-      <input type="text" name="name" placeholder="Your Name (optional)">
-      <button type="submit">Submit Review</button>
-    </form>
+    <h2 style="text-align:center; color: #ff4747; font-size: 2em;">What People Say</h2>
+    <div class="carousel">
+      <div class="carousel-item">
+        <p>“An amazing experience! Alexia is a true pro.”</p>
+        <strong>- Emma L.</strong>
+      </div>
+      <div class="carousel-item">
+        <p>“We booked her for our company event – total success!”</p>
+        <strong>- Thomas G.</strong>
+      </div>
+      <div class="carousel-item">
+        <p>“Great coaching session, I learned so much.”</p>
+        <strong>- Luca F.</strong>
+      </div>
+    </div>
   </section>
 
   <footer>
