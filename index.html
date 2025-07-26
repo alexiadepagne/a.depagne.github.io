@@ -212,12 +212,13 @@
   <section id="contact" class="section">
     <h2 style="text-align:center; color: #ff4747; font-size: 2em;">Contact Me</h2>
     <form action="https://formsubmit.co/alexia.depagne@gmail.com" method="POST">
-      <input type="hidden" name="_redirect" value="thankyou.html">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your message or booking request" rows="5" required></textarea>
-      <button type="submit">Send</button>
-    </form>
+  <input type="hidden" name="_subject" value="New Review from Website">
+  <input type="hidden" name="_next" value="thankyou.html">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <textarea name="review" placeholder="Write your review here..." rows="6" required></textarea>
+  <button type="submit">Submit Review</button>
+</form>
+
     <a href="review.html" class="review-button">Leave a Review</a>
   </section>
 
