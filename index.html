@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alexia Babyfoot</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0e0e0e;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 2em;
+      background: #1c1c1c;
+      border-bottom: 2px solid #a00;
+    }
+
+    .logo {
+      height: 80px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #hero {
+      text-align: center;
+      padding: 3em 1em;
+      background: #a00;
+      color: white;
+    }
+
+    #services, #contact {
+      padding: 2em;
+      background: #121212;
+    }
+
+    #services ul {
+      list-style-type: square;
+      padding-left: 1.5em;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, textarea {
+      margin-bottom: 1em;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button {
+      background: #a00;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2em;
+      background: #1c1c1c;
+      border-top: 2px solid #a00;
+    }
+
+    .socials {
+      margin-bottom: 1em;
+    }
+
+    .social-icon {
+      width: 30px;
+      margin: 0 10px;
+    }
+
+    .thankyou {
+      display: none;
+      text-align: center;
+      padding: 4em 2em;
+    }
+
+    .thankyou.visible {
+      display: block;
+    }
+
+    .main-content {
+      display: block;
+    }
+
+    .main-content.hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Gorillas.jpg" alt="TFC Hülzweiler-Saarwellingen Logo" class="logo">
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="main-content">
+    <section id="hero">
+      <h1>Alexia Depagne</h1>
+      <p>Professional foosball player - Elevate your events with class and competition</p>
+    </section>
+
+    <section id="services">
+      <h2>What I Offer</h2>
+      <ul>
+        <li><strong>Foosball Lessons</strong> – Individual or group coaching</li>
+        <li><strong>Tournament Organization</strong> – For companies, schools, or private events</li>
+        <li><strong>Foosball Table Rental</strong> – Premium tables for all occasions</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </div>
+
+  <div class="thankyou" id="thankyou">
+    <h1>Thank you!</h1>
+    <p>Your message has been sent successfully. I’ll get back to you shortly.</p>
+    <a href="#" onclick="window.location.reload()">← Back to homepage</a>
+  </div>
+
+  <footer>
+    <div class="socials">
+      <a href="https://www.instagram.com/a.depagne/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="social-icon">
+      </a>
+      <a href="https://www.tiktok.com/@a.depagne" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" class="social-icon">
+      </a>
+    </div>
+    <p>&copy; 2025 Alexia Depagne. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById(\"contact-form\").addEventListener(\"submit\", function (e) {
+      e.preventDefault();
+      document.querySelector(\".main-content\").classList.add(\"hidden\");
+      document.getElementById(\"thankyou\").classList.add(\"visible\");
+    });
+  </script>
+</body>
+</html>
