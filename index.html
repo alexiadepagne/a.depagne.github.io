@@ -4,102 +4,102 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alexia Foosball</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --main-color: #8B0000;
-      --accent-color: #f4f4f4;
-      --font: 'Helvetica Neue', sans-serif;
-    }
     body {
       margin: 0;
-      font-family: var(--font);
-      color: #222;
-      background: #fff;
+      font-family: 'Montserrat', sans-serif;
+      background: #0d0d0d;
+      color: #f0f0f0;
     }
     header {
+      background: #1a1a1a;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1em 2em;
-      background: #fff;
+      padding: 1.2em 2em;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.6);
       position: fixed;
       width: 100%;
-      top: 0;
       z-index: 1000;
-      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
     }
-    .brand {
+    .logo {
       display: flex;
       align-items: center;
-      font-weight: bold;
-      font-size: 1.5em;
-      color: var(--main-color);
+      gap: 10px;
     }
-    .brand::before {
-      content: url('Gorillas.jpg');
-      display: inline-block;
-      width: 35px;
-      height: 35px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      margin-right: 10px;
+    .logo img {
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
     }
+    .logo span {
+      font-weight: 800;
+      font-size: 1.4em;
+      color: #ff4747;
+    }
     nav a {
+      color: #ccc;
       text-decoration: none;
       margin-left: 1.5em;
-      color: #444;
       font-weight: 500;
     }
     nav a:hover {
-      color: var(--main-color);
+      color: #ff4747;
     }
     .hero {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 8em 2em 4em;
+      padding: 10em 2em 5em;
       text-align: center;
-      background: var(--accent-color);
+      background: linear-gradient(to right, #111, #1a1a1a);
     }
     .hero h1 {
       font-size: 3em;
+      font-weight: 800;
       margin-bottom: 0.5em;
     }
     .hero p {
       font-size: 1.2em;
       max-width: 600px;
+      margin: 0 auto 2em;
+      line-height: 1.5em;
+      color: #ccc;
     }
-    .button {
-      margin-top: 2em;
-      padding: 0.8em 2em;
-      background: var(--main-color);
+    .cta-button {
+      background: #ff4747;
       color: white;
-      font-size: 1em;
       border: none;
+      padding: 1em 2em;
+      font-size: 1em;
       border-radius: 30px;
       cursor: pointer;
+      transition: 0.3s;
+    }
+    .cta-button:hover {
+      background: #cc3939;
     }
     .section {
-      padding: 4em 2em;
+      padding: 5em 2em;
       max-width: 1000px;
       margin: 0 auto;
     }
     .services {
       display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2em;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
     .service-box {
-      background: #fafafa;
-      padding: 1.5em;
-      border-radius: 8px;
-      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+      background: #1a1a1a;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+    }
+    .service-box:hover {
+      transform: translateY(-5px);
     }
     .service-box h3 {
-      margin-top: 0;
-      color: var(--main-color);
+      color: #ff4747;
+      margin-bottom: 0.5em;
     }
     form {
       display: flex;
@@ -110,71 +110,79 @@
     }
     input, textarea {
       padding: 1em;
-      border: 1px solid #ccc;
-      border-radius: 6px;
+      border: none;
+      border-radius: 8px;
+      background: #333;
+      color: white;
     }
     button[type="submit"] {
-      background: var(--main-color);
+      background: #ff4747;
       color: white;
       border: none;
       padding: 1em;
       border-radius: 30px;
       cursor: pointer;
     }
+    button[type="submit"]:hover {
+      background: #cc3939;
+    }
     footer {
       background: #111;
-      color: #eee;
       text-align: center;
-      padding: 2em 1em;
+      padding: 2em;
+      color: #888;
     }
     .socials img {
-      width: 24px;
-      margin: 0 0.5em;
+      width: 28px;
+      margin: 0 10px;
       vertical-align: middle;
-      filter: invert(1);
+      filter: brightness(0) invert(1);
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="brand">Alexia Foosball</div>
+    <div class="logo">
+      <img src="Gorillas.jpg" alt="logo">
+      <span>Alexia Foosball</span>
+    </div>
     <nav>
       <a href="#services">Services</a>
-      <a href="#contact">Book</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <section class="hero">
-    <h1>World-Class Foosball Coaching & Events</h1>
-    <p>Learn, compete, and elevate your experience with Alexia — player, coach and tournament organizer.</p>
-    <a href="#contact"><button class="button">Book a Session</button></a>
+    <h1>Elevate Your Game</h1>
+    <p>Book coaching sessions, tournaments, or foosball table rentals with a champion player. Professional, personal, powerful.</p>
+    <a href="#contact"><button class="cta-button">Book Now</button></a>
   </section>
 
   <section id="services" class="section">
-    <h2 style="text-align:center; color: var(--main-color);">What I Offer</h2>
+    <h2 style="text-align:center; color: #ff4747; font-size: 2em;">What I Offer</h2>
     <div class="services">
       <div class="service-box">
-        <h3>Foosball Lessons</h3>
-        <p>Private or group training sessions to sharpen your technique and strategy.</p>
+        <h3>Foosball Coaching</h3>
+        <p>Private and group coaching tailored to your level. Learn from an experienced player with international success.</p>
       </div>
       <div class="service-box">
-        <h3>Tournament Organization</h3>
-        <p>Customized events for schools, companies, or private occasions — stress-free and exciting.</p>
+        <h3>Event Organization</h3>
+        <p>Complete tournament planning for schools, companies, and private events. Competitive, inclusive, unforgettable.</p>
       </div>
       <div class="service-box">
         <h3>Table Rental</h3>
-        <p>Rent professional-grade tables for your events with delivery and setup included.</p>
+        <p>Rent professional tables for any event, with delivery and setup. Perfect for parties, tournaments, and exhibitions.</p>
       </div>
     </div>
   </section>
 
   <section id="contact" class="section">
-    <h2 style="text-align:center; color: var(--main-color);">Get in Touch</h2>
+    <h2 style="text-align:center; color: #ff4747; font-size: 2em;">Contact Me</h2>
     <form action="https://formsubmit.co/alexia.depagne@gmail.com" method="POST">
       <input type="hidden" name="_redirect" value="thankyou.html">
-      <input type="text" name="name" placeholder="Your name" required>
-      <input type="email" name="email" placeholder="Your email" required>
-      <textarea name="message" placeholder="What would you like to book?" rows="5" required></textarea>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your message or booking request" rows="5" required></textarea>
       <button type="submit">Send</button>
     </form>
   </section>
@@ -188,7 +196,7 @@
         <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
       </a>
     </div>
-    <p style="margin-top:1em; font-style:italic;">You are your only limit.</p>
+    <p style="margin-top: 1em; font-style: italic;">You are your only limit.</p>
   </footer>
 </body>
 </html>
